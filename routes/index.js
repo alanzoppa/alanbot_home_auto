@@ -5,10 +5,11 @@ var config = require('../config.json');
 var CameraAimer = require('../events/camera_aimer');
 
 var emitter = new events.EventEmitter();
-var aimer = new CameraAimer(emitter, config);
+var aimer = new CameraAimer(emitter, config.camera);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  //emitter.emit('cameHome');
   res.render('index', { title: 'Express' });
 });
 
