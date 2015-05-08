@@ -2,10 +2,10 @@ var should = require('chai').should();
 var config = require('../config.json').camera;
 var config = require('../example_config.json').camera;
 var test_data = require('../test_data.json').camera;
-var CameraAimer = require('../events/camera_privacy');
+var CameraAimer = require('../events/camera_aimer');
 
 
-describe('camera_privacy', function() {
+describe('camera_aimer', function() {
     beforeEach(function() {
         this.cameraAimer = new CameraAimer(config);
     })
