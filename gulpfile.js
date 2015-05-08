@@ -14,8 +14,7 @@ gulp.task('watch', function(done) {
 
 
 //gulp setState --state watch
-//gulp setState --state lookAway
-
+//gulp setState --state lookAway 
 gulp.task('setState', function() {
     var aimer = new CameraAimer();
     return aimer.setState(argv.state);

@@ -7,8 +7,19 @@ var parseString = require('xml2js').parseString;
 
 
 class CameraAimer {
-    constructor(config) {
+    constructor(emitter, config) {
+      this.emitter = emitter;
       this.config = config || base_config;
+      this.state = null;
+      this._setupEvents();
+    }
+    _setupEvents() {
+        this.emitter.on('cameHome', ()=> {
+            this.setState('lookAway');
+        })
+        this.emitter.on('wentAway', ()=> {
+            this.setState('watch');
+        })
     }
     _paramsFor(state) {
         var state = this.config.states[state];
@@ -36,6 +47,7 @@ class CameraAimer {
 
     setState(state, callback) {
         var promises = [];
+        var aimer = this;
         this.pathsForState(state).map(function(path) {
             var deferral = Q.defer();
             promises.push(deferral.promise);
@@ -45,7 +57,9 @@ class CameraAimer {
                     parseString(body, function(err, r) {
                         if (r && r['CGI_Result'] && r['CGI_Result'].runResult
                             && r['CGI_Result'].runResult[0] == '0'
-                            ) { deferral.resolve(true); }
+                            ) {
+                                deferral.resolve(true);
+                            }
                         else { deferral.reject("The command failed") }
                     })
                 });
@@ -54,7 +68,9 @@ class CameraAimer {
                 });
             })
         })
-        return Q.all(promises)
+        var allPromises = Q.all(promises);
+        allPromises.then( ()=> {this.state = state;})
+        return allPromises;
     }
 }
 
