@@ -3,6 +3,8 @@ var config = require('../config.json').camera;
 var config = require('../example_config.json').camera;
 var test_data = require('../test_data.json').camera;
 var CameraAimer = require('../events/camera_aimer');
+var nock = require('nock');
+var url = require('url');
 
 
 describe('camera_aimer', function() {
@@ -21,4 +23,25 @@ describe('camera_aimer', function() {
     it('should return full urls for a state', function() {
         this.cameraAimer.pathsForState('watch').should.eql(test_data.expectedUrls);
     })
+    it('should get status 0 for valid settings', function(done) {
+        var paths = this.cameraAimer.pathsForState('watch');
+        for (let path of paths) {
+            var parsed = url.parse(path);
+            var xmlResult = "<CGI_Result><result>0</result><runResult>0</runResult></CGI_Result>";
+            nock(`${parsed.protocol}\/\/${parsed.host}`)
+                .get(parsed.path)
+                .delay(250)
+                .reply(200, xmlResult)
+        }
+        this.cameraAimer.setState('watch').then(function(result){
+            var allTrue = result.every(function(i){return i});
+            allTrue.should.be.true;
+            done();
+        })
+
+    })
+
+
+
+
 })
