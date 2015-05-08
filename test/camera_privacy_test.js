@@ -13,24 +13,24 @@ describe('camera_aimer', function() {
     })
     it('should have path, params and states ', function() {
         this.cameraAimer.config.should.have.all.keys('base', 'path', 'params', 'states')
-    }),
+    })
     it('should return arrays of params for any state', function() {
         var arrayOfParams = this.cameraAimer._paramsFor('watch');
 
         var expected = test_data.expectedParams;
         arrayOfParams.should.eql(expected);
-    }),
+    })
     it('should return full urls for a state', function() {
         this.cameraAimer.pathsForState('watch').should.eql(test_data.expectedUrls);
     })
-    it('should get status 0 for valid settings', function(done) {
+    it('should return true for valid settings', function(done) {
         var paths = this.cameraAimer.pathsForState('watch');
         for (let path of paths) {
             var parsed = url.parse(path);
             var xmlResult = "<CGI_Result><result>0</result><runResult>0</runResult></CGI_Result>";
             nock(`${parsed.protocol}\/\/${parsed.host}`)
                 .get(parsed.path)
-                .delay(250)
+                .delay(100)
                 .reply(200, xmlResult)
         }
         this.cameraAimer.setState('watch').then(function(result){
@@ -40,6 +40,38 @@ describe('camera_aimer', function() {
         })
 
     })
+    it('should error for invalid settings', function(done) {
+        var paths = this.cameraAimer.pathsForState('watch');
+        for (let path of paths) {
+            var parsed = url.parse(path);
+            var xmlResult = "<CGI_Result><result>0</result><runResult>2</runResult></CGI_Result>";
+            nock(`${parsed.protocol}\/\/${parsed.host}`)
+                .get(parsed.path)
+                .delay(100)
+                .reply(200, xmlResult)
+        }
+        this.cameraAimer.setState('watch').catch(function(result){
+            result.should.eql("The command failed");
+            done();
+        })
+
+    })
+    it('should 404 for invalid urls', function(done) {
+        var paths = this.cameraAimer.pathsForState('watch');
+        for (let path of paths) {
+            var parsed = url.parse(path);
+            nock(`${parsed.protocol}\/\/${parsed.host}`)
+                .get(parsed.path)
+                .delay(100)
+                .reply(404, "whatever")
+        }
+        this.cameraAimer.setState('watch').catch(function(result){
+            result.should.eql("The command failed");
+            done();
+        })
+
+    })
+
 
 
 

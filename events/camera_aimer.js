@@ -41,10 +41,10 @@ class CameraAimer {
             promises.push(deferral.promise);
             http.get(path, function(res) {
                 res.on('data', function(chunk) {
-                    parseString(chunk.toString('utf-8'), function(err, result) {
-                        if (result['CGI_Result'].result[0] == '0') {
-                            deferral.resolve(true);
-                        }
+                    parseString(chunk.toString('utf-8'), function(err, r) {
+                        if (r && r['CGI_Result'] && r['CGI_Result'].runResult
+                            && r['CGI_Result'].runResult[0] == '0'
+                            ) { deferral.resolve(true); }
                         else { deferral.reject("The command failed") }
                     })
                 });
