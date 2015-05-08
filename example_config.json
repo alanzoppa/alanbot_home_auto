@@ -1,0 +1,22 @@
+{
+    "camera": {
+        "base": "http://example.com",
+        "path": "/cgi-bin/CGIProxy.fcgi",
+        "params": {
+            "cmd": "ptzGotoPresetPoint",
+            "usr": "herp",
+            "pwd": "derpington"
+        },
+        "states": {
+            "watch": {
+                "8001": {"name": "Herpville"},
+                "8002": {"name": "Derpville"}
+            },
+            "lookAway": {
+                "8001": {"name": "Nothing"},
+                "8002": {"name": "Nothing"}
+
+            }
+        }
+    }
+}
