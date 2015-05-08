@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var events = require('events')
-var config = require('./example_config.json');
-var CameraAimer = require('./events/camera_aimer');
+var config = require('../config.json');
+var CameraAimer = require('../events/camera_aimer');
 
-var emitter = events.EventEmitter();
+var emitter = new events.EventEmitter();
 var aimer = new CameraAimer(emitter, config);
 
 /* GET home page. */
@@ -28,9 +28,11 @@ router.post('/', function(req, res, next) {
   console.log(req.body.value);
   if (req.body.value == 'Home') {
       emitter.emit('cameHome');
+      console.log('emitted came home')
   }
   else if (req.body.value == 'Away' ) {
       emitter.emit('wentAway');
+      console.log('emitted went away')
   }
   res.json({success: true})
 }); 
