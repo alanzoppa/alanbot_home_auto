@@ -41,7 +41,8 @@ class CameraAimer {
             promises.push(deferral.promise);
             http.get(path, function(res) {
                 res.on('data', function(chunk) {
-                    parseString(chunk.toString('utf-8'), function(err, r) {
+                    var body = chunk.toString('utf-8');
+                    parseString(body, function(err, r) {
                         if (r && r['CGI_Result'] && r['CGI_Result'].runResult
                             && r['CGI_Result'].runResult[0] == '0'
                             ) { deferral.resolve(true); }
