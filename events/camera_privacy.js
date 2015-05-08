@@ -8,13 +8,22 @@ module.exports = class CameraAimer {
       this.config = config;
     }
     _paramsFor(state) {
-       var state = this.config.states[state];
-       var out = [];
-       for (let port of Object.keys(state)) {
-           out.push(R.merge(this.config.params, state[port]));
-       }
-       return out;
-       //}
+        var state = this.config.states[state];
+        var out = [];
+        for (let port of Object.keys(state)) {
+            out.push(R.merge(this.config.params, state[port]));
+        }
+        return out;
+    }
+    _urlWithPath() {
+        return `${this.config.base}${this.config.path}`
+    }
+    pathsForState(state) {
+        var paramArrays = this._paramsFor(state);
+        var buildUrl = (params) => {
+            return `${this._urlWithPath()}?${querystring.stringify(params)}`
+        }
+        return R.map(buildUrl, paramArrays);
     }
 }
 

@@ -1,0 +1,23 @@
+{
+    "camera": {
+        "expectedParams": [
+            {
+                "cmd": "ptzGotoPresetPoint",
+                "usr": "herp",
+                "pwd": "derpington",
+                "name": "Herpville"
+            },
+            {
+                "cmd": "ptzGotoPresetPoint",
+                "usr": "herp",
+                "pwd": "derpington",
+                "name": "Derpville"
+            }
+        ],
+        "expectedUrls": [
+            "http://example.com/cgi-bin/CGIProxy.fcgi?cmd=ptzGotoPresetPoint&usr=herp&pwd=derpington&name=Herpville",
+            "http://example.com/cgi-bin/CGIProxy.fcgi?cmd=ptzGotoPresetPoint&usr=herp&pwd=derpington&name=Derpville"
+        ]
+
+    }
+}
