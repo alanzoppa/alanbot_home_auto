@@ -9,7 +9,6 @@ var aimer = new CameraAimer(emitter, config.camera);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //emitter.emit('cameHome');
   res.render('index', { title: 'Express' });
 });
 
@@ -26,7 +25,7 @@ router.post('/', function(req, res, next) {
       //physical: false,
       //location_id: '8a1eca113efb6b34013f1f1915b6031f',
       //hub_id: null }
-  console.log(req.body.value);
+  console.log(req.body);
   if (req.body.value == 'Home') {
       emitter.emit('cameHome');
       console.log('emitted came home')
