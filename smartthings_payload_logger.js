@@ -41,7 +41,8 @@ class SmartthingsPayloadLogger {
     _generateFilename() {
         var date = new Date();
         var month = pad(date.getMonth()+1, 2);
-        return `smartthings-requests-${month}-${date.getFullYear()}.log`
+        var env = process.env.ENV || "development";
+        return `smartthings-requests-${month}-${date.getFullYear()}-${env}.log`
     }
 
     _ensureLogfileWithHeader() {

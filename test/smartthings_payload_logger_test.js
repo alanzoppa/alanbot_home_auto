@@ -22,7 +22,7 @@ describe("smartthings logging", function() {
 
     it("should create the right filename", function() {
         this.logger._generateFilename().should.eql(
-                'smartthings-requests-04-2015.log'
+                'smartthings-requests-04-2015-test.log'
                 )
     })
 
@@ -73,6 +73,7 @@ describe("smartthings logging", function() {
 
         })
     })
+
 
 })
 
