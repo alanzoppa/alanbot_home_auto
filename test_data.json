@@ -19,5 +19,9 @@
             "http://example.com:8002/cgi-bin/CGIProxy.fcgi?cmd=ptzGotoPresetPoint&usr=herp&pwd=derpington&name=Derpville"
         ]
 
+    },
+    "smartthings_logging": {
+        "test_csv_header": "date,value,name,display_name,description,source,state_changed,physical,location_id,hub_id\n",
+        "test_csv_row": "2015-05-09T20:30:55.686Z,Home,mode,Home,Home is now in Home mode,LOCATION,true,false,00000000000000000000000000000000,\n"
     }
 }
