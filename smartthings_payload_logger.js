@@ -59,7 +59,6 @@ class SmartthingsPayloadLogger {
            if ((err === null) && (callback !== undefined)) {
                callback()
            }
-           //if (callback) {callback()}
        })
     }
 }
