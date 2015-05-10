@@ -42,7 +42,7 @@ class SmartthingsPayloadLogger {
         var date = new Date();
         var month = pad(date.getMonth()+1, 2);
         var env = process.env.ENV || "development";
-        return `smartthings-requests-${month}-${date.getFullYear()}-${env}.log`
+        return `smartthings-requests-${month}-${date.getFullYear()}-${env}.csv`
     }
 
     _ensureLogfileWithHeader() {
