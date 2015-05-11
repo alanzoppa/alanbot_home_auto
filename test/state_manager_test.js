@@ -24,4 +24,12 @@ describe("State Manager", function() {
         var stateManager = new HomeStateMachine();
         stateManager.state.should.eql('home');
     })
+    it("should respond to smartthings events", function() {
+        var stateManager = new HomeStateMachine();
+        stateManager.state.should.eql('home');
+        stateManager.stEvent(fake_smartthings_payloads[1])
+        stateManager.state.should.eql('away');
+        stateManager.stEvent(fake_smartthings_payloads[0])
+        stateManager.state.should.eql('home');
+    })
 })

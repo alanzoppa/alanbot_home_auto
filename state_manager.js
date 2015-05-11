@@ -8,7 +8,6 @@ var fsm = machina.Fsm.extend( {
     initialize: function( options ) {
         try {
             var lastState = fs.readFileSync(this.stateFileName).toString();
-            //console.log('resuming: '+lastState);
             this.transition(lastState);
         } catch (e) {
             this.transition('home');
@@ -17,6 +16,10 @@ var fsm = machina.Fsm.extend( {
 
     namespace: "home-fsm",
     initialState: "uninitialized",
+
+    stEvent: function(payload) {
+        this.transition(payload.value.toLowerCase());
+    },
 
     states: {
         uninitialized: {
