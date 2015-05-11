@@ -10,6 +10,7 @@ var aimer = new CameraAimer(emitter, config.camera);
 
 var stLogger = new SmartthingsPayloadLogger();
 var HomeStateMachine = require('../state_manager');
+var stateMachine = new HomeStateMachine();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,7 +19,6 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   stLogger.log(req.body);
-  var stateMachine = new HomeStateMachine();
   stateMachine.stEvent(req.body);
   res.json({success: true})
 }); 
