@@ -19,11 +19,11 @@ router.post('/', function(req, res, next) {
   stLogger.log(req.body);
   if (req.body.value == 'Home') {
       emitter.emit('cameHome');
-      console.log('emitted came home')
+      //console.log('emitted came home')
   }
   else if (req.body.value == 'Away' ) {
       emitter.emit('wentAway');
-      console.log('emitted went away')
+      //console.log('emitted went away')
   }
   res.json({success: true})
 }); 
