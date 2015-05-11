@@ -1,11 +1,17 @@
 var fs = require('fs');
 var machina = require('machina');
+var config = require('./config.json').camera;
+var CameraAimer = require('./events/camera_aimer');
+
+var events = require('events');
+var eventMachine = new events.EventEmitter();
 
 var fsm = machina.Fsm.extend( {
 
     stateFileName: __dirname+'/tmp/lastState',
 
     initialize: function( options ) {
+        this.cameraAimer = new CameraAimer(eventMachine, config);
         try {
             var lastState = fs.readFileSync(this.stateFileName).toString();
             this.transition(lastState);
@@ -27,11 +33,13 @@ var fsm = machina.Fsm.extend( {
         home: {
             _onEnter: function() {
                 fs.writeFileSync(this.stateFileName, 'home')
+                this.cameraAimer.setState('lookAway');
             }
         },
         away: {
             _onEnter: function() {
-                fs.writeFileSync(this.stateFileName, 'away')
+                fs.writeFileSync(this.stateFileName, 'away');
+                this.cameraAimer.setState('watch');
             }
         },
         night: {
