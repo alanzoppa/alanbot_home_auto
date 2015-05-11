@@ -24,6 +24,8 @@ var fsm = machina.Fsm.extend( {
     initialState: "uninitialized",
 
     stEvent: function(payload) {
+        //console.log(payload);
+        //console.log(payload.value);
         this.transition(payload.value.toLowerCase());
     },
 

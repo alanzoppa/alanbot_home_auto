@@ -26,9 +26,7 @@ describe("route file behavior", function() {
                 .get(parsed.path)
                 .delay(100)
                 .reply(200, xmlResult)
-        }
-
-
+        } 
 
 
         var f = routes.stack[1].route.stack[0].handle;

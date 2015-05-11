@@ -9,6 +9,7 @@ var emitter = new events.EventEmitter();
 var aimer = new CameraAimer(emitter, config.camera);
 
 var stLogger = new SmartthingsPayloadLogger();
+var HomeStateMachine = require('../state_manager');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,14 +18,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   stLogger.log(req.body);
-  if (req.body.value == 'Home') {
-      emitter.emit('cameHome');
-      //console.log('emitted came home')
-  }
-  else if (req.body.value == 'Away' ) {
-      emitter.emit('wentAway');
-      //console.log('emitted went away')
-  }
+  var stateMachine = new HomeStateMachine();
+  stateMachine.stEvent(req.body);
   res.json({success: true})
 }); 
 
