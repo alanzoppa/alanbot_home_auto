@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   stLogger.log(req.body);
   stateMachine.stEvent(req.body);
+  console.log(req.body);
   res.json({success: true})
 }); 
 
