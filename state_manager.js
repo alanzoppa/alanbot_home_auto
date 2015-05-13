@@ -24,29 +24,26 @@ var fsm = machina.Fsm.extend( {
     initialState: "uninitialized",
 
     stEvent: function(payload) {
-        //console.log(payload);
-        //console.log(payload.value);
         this.transition(payload.value.toLowerCase());
     },
 
     states: {
-        uninitialized: {
-        },
+        uninitialized: { },
         home: {
             _onEnter: function() {
-                fs.writeFileSync(this.stateFileName, 'home')
+                fs.writeFile(this.stateFileName, 'home')
                 this.cameraAimer.setState('lookAway');
             }
         },
         away: {
             _onEnter: function() {
-                fs.writeFileSync(this.stateFileName, 'away');
+                fs.writeFile(this.stateFileName, 'away');
                 this.cameraAimer.setState('watch');
             }
         },
         night: {
             _onEnter: function() {
-                fs.writeFileSync(this.stateFileName, 'night')
+                fs.writeFile(this.stateFileName, 'night')
             }
         }
     }
