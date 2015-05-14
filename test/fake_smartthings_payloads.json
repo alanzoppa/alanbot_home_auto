@@ -70,5 +70,15 @@
   "state_changed": true,
   "physical": false,
   "location_id": "8a1eca113efb6b34013f1f1915b6031f",
-  "hub_id": "8ac43eda3f1faaec013f21c0a3880af6" }
+  "hub_id": "8ac43eda3f1faaec013f21c0a3880af6" },
+{ "date": "2015-05-09T20:30:59.913Z",
+  "value": "Evening",
+  "name": "mode",
+  "display_name": "Home",
+  "description": "Home is now in Evening mode",
+  "source": "LOCATION",
+  "state_changed": true,
+  "physical": false,
+  "location_id": "00000000000000000000000000000000",
+  "hub_id": null }
 ]

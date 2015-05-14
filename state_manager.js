@@ -41,6 +41,11 @@ var fsm = machina.Fsm.extend( {
                 this.cameraAimer.setState('watch');
             }
         },
+        evening: {
+            _onEnter: function() {
+                fs.writeFile(this.stateFileName, 'evening');
+            }
+        },
         night: {
             _onEnter: function() {
                 fs.writeFile(this.stateFileName, 'night')
