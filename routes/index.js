@@ -5,8 +5,7 @@ var config = require('../config.json');
 var CameraAimer = require('../events/camera_aimer');
 var SmartthingsPayloadLogger = require('../smartthings_payload_logger');
 
-var emitter = new events.EventEmitter();
-var aimer = new CameraAimer(emitter, config.camera);
+var aimer = new CameraAimer(config.camera);
 
 var stLogger = new SmartthingsPayloadLogger();
 var HomeStateMachine = require('../state_manager');

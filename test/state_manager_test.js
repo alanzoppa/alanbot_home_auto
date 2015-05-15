@@ -5,12 +5,13 @@ var nock = require('nock');
 require('chai').should();
 var CameraAimer = require('../events/camera_aimer');
 var events = require('events');
-var emitter = new events.EventEmitter();
-var config = require('../config.json');
+var emitter = new Object();
+var R = require('ramda')
+var config = R.clone(require('../config.json'));
 
 var HomeStateMachine = require('../state_manager');
 
-var cameraAimer = new CameraAimer(emitter, config.camera);
+var cameraAimer = new CameraAimer(config.camera);
 
 function nockState(state) {
     var paths = cameraAimer.pathsForState(state);
@@ -47,6 +48,7 @@ describe("State Manager", function() {
         stateManager.state.should.eql('home');
     })
     it("should be able to transition to evening", function() {
+        nockState('lookAway');
         var stateManager = new HomeStateMachine();
         stateManager.stEvent(fake_smartthings_payloads[7])
         stateManager.state.should.eql('evening');

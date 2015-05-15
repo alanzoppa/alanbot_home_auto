@@ -4,7 +4,6 @@ var SmartthingsPayloadLogger = require('../smartthings_payload_logger');
 var CameraAimer = require('../events/camera_aimer');
 var nock = require('nock');
 var config = require('../config.json');
-var events = require('events');
 var url = require('url');
 var fs = require('fs');
 require('chai').should();
@@ -13,8 +12,7 @@ var stLogger = new SmartthingsPayloadLogger();
 describe("route file behavior", function() {
     beforeEach(function() {
         this.logger = new SmartthingsPayloadLogger();
-        this.emitter = new events.EventEmitter();
-        this.cameraAimer = new CameraAimer(this.emitter, config.camera); 
+        this.cameraAimer = new CameraAimer(config.camera); 
     })
 
     it('should log requests made to the route', function(done) {

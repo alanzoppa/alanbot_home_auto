@@ -1,4 +1,3 @@
-var base_config = require('../config.json').camera;
 var http = require('http');
 var querystring = require('querystring');
 var R = require('ramda');
@@ -7,19 +6,9 @@ var parseString = require('xml2js').parseString;
 
 
 class CameraAimer {
-    constructor(emitter, config) {
-      this.emitter = emitter;
-      this.config = config || base_config;
+    constructor(config) {
+      this.config = config;
       this.state = null;
-      this._setupEvents();
-    }
-    _setupEvents() {
-        this.emitter.on('cameHome', ()=> {
-            this.setState('lookAway');
-        })
-        this.emitter.on('wentAway', ()=> {
-            this.setState('watch');
-        })
     }
     _paramsFor(state) {
         var state = this.config.states[state];
