@@ -1,0 +1,1056 @@
+{
+    "lights": {
+        "1": {
+            "state": {
+                "on": true,
+                "bri": 128,
+                "hue": 16874,
+                "sat": 71,
+                "effect": "none",
+                "xy": [
+                    0.4137,
+                    0.3976
+                ],
+                "ct": 296,
+                "alert": "none",
+                "colormode": "xy",
+                "reachable": true
+            },
+            "type": "Extended color light",
+            "name": "Living Room 1",
+            "modelid": "LCT001",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:d8:b2:4a-0b",
+            "swversion": "66013452",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "2": {
+            "state": {
+                "on": true,
+                "bri": 128,
+                "hue": 16874,
+                "sat": 71,
+                "effect": "none",
+                "xy": [
+                    0.4137,
+                    0.3976
+                ],
+                "ct": 296,
+                "alert": "none",
+                "colormode": "xy",
+                "reachable": true
+            },
+            "type": "Extended color light",
+            "name": "Living Room 2",
+            "modelid": "LCT001",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:d8:d0:da-0b",
+            "swversion": "66013452",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "3": {
+            "state": {
+                "on": false,
+                "bri": 222,
+                "hue": 6113,
+                "sat": 136,
+                "effect": "none",
+                "xy": [
+                    0.5041,
+                    0.3725
+                ],
+                "ct": 451,
+                "alert": "none",
+                "colormode": "xy",
+                "reachable": true
+            },
+            "type": "Extended color light",
+            "name": "Bedroom",
+            "modelid": "LCT001",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:fb:1f:73-0b",
+            "swversion": "66013452",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "4": {
+            "state": {
+                "on": false,
+                "bri": 254,
+                "alert": "none",
+                "reachable": true
+            },
+            "type": "Dimmable light",
+            "name": "Storage Room",
+            "modelid": "LWB004",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:de:df:3a-0b",
+            "swversion": "66012040",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "5": {
+            "state": {
+                "on": true,
+                "bri": 77,
+                "alert": "none",
+                "reachable": true
+            },
+            "type": "Dimmable light",
+            "name": "Kitchen 1",
+            "modelid": "LWB004",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:de:ac:9a-0b",
+            "swversion": "66012040",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "6": {
+            "state": {
+                "on": false,
+                "bri": 204,
+                "alert": "none",
+                "reachable": true
+            },
+            "type": "Dimmable light",
+            "name": "Kitchen 2",
+            "modelid": "LWB004",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:de:d4:37-0b",
+            "swversion": "66012040",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        },
+        "7": {
+            "state": {
+                "on": false,
+                "bri": 204,
+                "alert": "none",
+                "reachable": true
+            },
+            "type": "Dimmable light",
+            "name": "Kitchen 3",
+            "modelid": "LWB004",
+            "manufacturername": "Philips",
+            "uniqueid": "00:17:88:01:00:de:da:78-0b",
+            "swversion": "66012040",
+            "pointsymbol": {
+                "1": "none",
+                "2": "none",
+                "3": "none",
+                "4": "none",
+                "5": "none",
+                "6": "none",
+                "7": "none",
+                "8": "none"
+            }
+        }
+    },
+    "groups": {},
+    "config": {
+        "name": "Philips hue",
+        "zigbeechannel": 20,
+        "mac": "00:17:88:13:79:aa",
+        "dhcp": true,
+        "ipaddress": "192.168.1.11",
+        "netmask": "255.255.255.0",
+        "gateway": "192.168.1.1",
+        "proxyaddress": "none",
+        "proxyport": 0,
+        "UTC": "2015-05-17T02:34:33",
+        "localtime": "2015-05-16T21:34:33",
+        "timezone": "America/Chicago",
+        "whitelist": {
+            "ffffffff895551f9ffffffff848fe0dd": {
+                "last use date": "2015-05-17T02:34:33",
+                "create date": "2015-03-14T20:49:44",
+                "name": "Hue#Samsung SAMSUNG-SM-"
+            },
+            "ad45a1886182c223": {
+                "last use date": "2015-03-14T21:25:47",
+                "create date": "2015-03-14T21:19:24",
+                "name": "HueProApp"
+            },
+            "aOQvXqNO1O3E9txW": {
+                "last use date": "2015-03-14T22:07:46",
+                "create date": "2015-03-14T21:26:08",
+                "name": "TapApp#samsung SAMSUNG-SM-"
+            },
+            "c8b1806c-0bb4-478c-b023-a430dcbffae0-0": {
+                "last use date": "2015-03-23T20:53:26",
+                "create date": "2015-03-14T21:41:04",
+                "name": "c8b1806c-0bb4-478c-b023-a430dcbffae0-0"
+            },
+            "fffffffff1923d03ffffffff848fe0dd": {
+                "last use date": "2015-05-12T01:59:08",
+                "create date": "2015-03-14T22:38:30",
+                "name": "Hue#Samsung SAMSUNG-SM-"
+            },
+            "3cc1068e10fa930718562ba220e0eb2b": {
+                "last use date": "2015-03-15T03:11:31",
+                "create date": "2015-03-15T02:55:44",
+                "name": "Alfred 2"
+            },
+            "autohueuser": {
+                "last use date": "2015-03-31T02:20:49",
+                "create date": "2015-03-31T02:02:12",
+                "name": "AutoHue"
+            },
+            "bab981a5-61b4-4343-a558-3f528d671948-0": {
+                "last use date": "2015-05-17T02:34:33",
+                "create date": "2015-04-03T22:28:10",
+                "name": "bab981a5-61b4-4343-a558-3f528d671948-0"
+            },
+            "226f1d0d36f302c73d3ce9c9b82bae3": {
+                "last use date": "2015-04-17T02:41:56",
+                "create date": "2015-04-14T02:55:22",
+                "name": "Alfred 2"
+            },
+            "3949f5a0b5ffc8f4a491f019ae2c7f": {
+                "last use date": "2015-05-04T00:45:12",
+                "create date": "2015-05-04T00:45:12",
+                "name": "on-a-pi"
+            },
+            "37469af837636c5f27b61ca8124b46f": {
+                "last use date": "2015-05-04T00:52:03",
+                "create date": "2015-05-04T00:52:03",
+                "name": "Node.js API"
+            },
+            "1d37bee36377f4f314ee3db391646c7": {
+                "last use date": "2015-05-17T02:34:33",
+                "create date": "2015-05-04T01:03:20",
+                "name": "Node.js API"
+            }
+        },
+        "swversion": "01023599",
+        "apiversion": "1.7.0",
+        "swupdate": {
+            "updatestate": 0,
+            "checkforupdate": false,
+            "devicetypes": {
+                "bridge": false,
+                "lights": [],
+                "sensors": []
+            },
+            "url": "",
+            "text": "",
+            "notify": false
+        },
+        "linkbutton": false,
+        "portalservices": true,
+        "portalconnection": "connected",
+        "portalstate": {
+            "signedon": true,
+            "incoming": true,
+            "outgoing": true,
+            "communication": "disconnected"
+        }
+    },
+    "schedules": {
+        "3975665751908115": {
+            "name": "Alarm",
+            "description": "Living Room: Bright",
+            "command": {
+                "address": "/api/ffffffff895551f9ffffffff848fe0dd/groups/0/action",
+                "body": {
+                    "scene": "38120c7d6-on-0"
+                },
+                "method": "PUT"
+            },
+            "localtime": "W127/T07:30:00",
+            "time": "W127/T12:30:00",
+            "created": "2015-05-14T23:22:47",
+            "status": "enabled"
+        }
+    },
+    "scenes": {
+        "70cebbb6f-on-0": {
+            "name": "Pencils on 1428098941085",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "744e15003-on-0": {
+            "name": "Ski on 1428098953378",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "02b12e930-off-0": {
+            "name": "HIDDEN off 1426366702905",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "f46f63b2f-on-0": {
+            "name": "Sexy on 1428209084950",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "948ce012e-on-0": {
+            "name": "Kathy on 1426366869815",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "fdec83a81-on-0": {
+            "name": "Blue rain on 1426366876732",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "c77174f42-on-0": {
+            "name": "Taj on 1426366879829",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "8a292055c-on-0": {
+            "name": "Sexy on 1428209125258",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "087f88f52-on-0": {
+            "name": "Sunset on 1426366888300",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "21ca86273-on-0": {
+            "name": "Greece on 1426366896432",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "1e1bc4980-on-0": {
+            "name": "Living Room: Evening on 14282412",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "84fa88aa5-on-5": {
+            "name": "Energize fon 1426367463753",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "65ed085fc-on-0": {
+            "name": "Living Room: Evening on 14282097",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "f54fb8a01-on-0": {
+            "name": "Living Room: Evening on 14282096",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "6b6ca6a0d-on-0": {
+            "name": "Beach on 1426368489938",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "26247cdbc-on-0": {
+            "name": "Deep sea on 1426368494564",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "ac637e2f0-on-0": {
+            "name": "Relax on 1426368498814",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "98850ec24-on-0": {
+            "name": "Hammock on 1426368506921",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "ffeea09ee-on-0": {
+            "name": "Jump! on 1426368512889",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "ff6f49dfd-on-0": {
+            "name": "Laila on 1426368517811",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "e915785b2-on-0": {
+            "name": "Reading on 1426368521792",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "33300ac17-on-0": {
+            "name": "Feet up on 1426368602800",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "bc9bc22d3-on-0": {
+            "name": "Living Room: Evening on 14282413",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "b2595e9d5-off-0": {
+            "name": "New scene off 1426388321097",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "9b61d6be5-on-0": {
+            "name": "Living Room: Bright on 142845183",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "e36b59e86-on-0": {
+            "name": "Energize on 1426427028665",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "f5d73dbdd-on-0": {
+            "name": "Concentrate on 1426460262927",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "5e50e9956-on-0": {
+            "name": "Living Room: Evening on 14282099",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "b1b785288-on-0": {
+            "name": "Evening on 1426473520444",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "eccbc87e4-off-0": {
+            "name": "Bright Kitchen off 1426630386990",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "70e259c19-on-0": {
+            "name": "Evening on 1428241340523",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "24794a474-on-0": {
+            "name": "Bright Kitchen on 1426630626019",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "369d21913-on-0": {
+            "name": "Bright Kitchen on 1426630728373",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "6a317037f-on-0": {
+            "name": "Evening on 1428451965315",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "7f4516e10-on-0": {
+            "name": "Milos on 1426987506846",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "eeddad6d7-on-0": {
+            "name": "Patas on 1426994852848",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "3b1f7d9e7-on-0": {
+            "name": "Bedroom: Bright evening on 14276",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "c02d7c55e-on-0": {
+            "name": "Bedroom: Sexy on 1427600150705",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "1b5622c89-on-0": {
+            "name": "Bedroom: Purple on 1427600366594",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "a58cfb500-on-0": {
+            "name": "Living Room: Bright on 142767246",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "169efebf7-on-0": {
+            "name": "Living Room: Evening on 14276725",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "56e23189a-on-0": {
+            "name": "Sexy on 1427672716685",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "e2662e6fb-on-0": {
+            "name": "Living Room: Evening on 14276727",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "bcd81ce16-on-0": {
+            "name": "Living Room: Bright on 142767277",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "e36b59e86-on-15": {
+            "name": "Energize fon 1427686921465",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "740c17124-on-0": {
+            "name": "Bedroom: Sexy on 1427686970623",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "51da1d3eb-on-0": {
+            "name": "Bedroom: Sexy on 1427864535524",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "c1f89a231-on-0": {
+            "name": "Sunset on 1428098930441",
+            "lights": [
+                "1",
+                "2",
+                "3"
+            ],
+            "active": true
+        },
+        "b02b55b4f-on-0": {
+            "name": "Bedroom: Purple on 1428209594841",
+            "lights": [
+                "3"
+            ],
+            "active": true
+        },
+        "6a06fd6a6-on-0": {
+            "name": "Evening on 1428241391407",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "852133e36-on-0": {
+            "name": "Evening on 1428369687477",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "19ed40b39-on-0": {
+            "name": "Living Room: Bright on 142845179",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        },
+        "38120c7d6-on-0": {
+            "name": "Living Room: Bright on 143164576",
+            "lights": [
+                "1",
+                "2"
+            ],
+            "active": true
+        }
+    },
+    "rules": {
+        "1": {
+            "name": "Tap 2.4 Bedroom: Sexy",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-03-30T03:51:03",
+            "lasttriggered": "2015-05-15T04:19:27",
+            "timestriggered": 8,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/2/state/buttonevent",
+                    "operator": "eq",
+                    "value": "18"
+                },
+                {
+                    "address": "/sensors/2/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "740c17124-on-0"
+                    }
+                }
+            ]
+        },
+        "2": {
+            "name": "Tap 2.2 Bedroom: Purple",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-04-10T02:59:46",
+            "lasttriggered": "2015-05-15T04:19:24",
+            "timestriggered": 11,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/2/state/buttonevent",
+                    "operator": "eq",
+                    "value": "16"
+                },
+                {
+                    "address": "/sensors/2/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "b02b55b4f-on-0"
+                    }
+                }
+            ]
+        },
+        "3": {
+            "name": "Tap 2.1 1 light",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-03-29T03:40:27",
+            "lasttriggered": "2015-05-16T06:05:18",
+            "timestriggered": 61,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/2/state/buttonevent",
+                    "operator": "eq",
+                    "value": "34"
+                },
+                {
+                    "address": "/sensors/2/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "eccbc87e4-off-0"
+                    }
+                }
+            ]
+        },
+        "4": {
+            "name": "Tap 2.3 Bedroom: Bright evening",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-04-10T02:59:45",
+            "lasttriggered": "2015-05-16T03:51:03",
+            "timestriggered": 26,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/2/state/buttonevent",
+                    "operator": "eq",
+                    "value": "17"
+                },
+                {
+                    "address": "/sensors/2/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "3b1f7d9e7-on-0"
+                    }
+                }
+            ]
+        },
+        "5": {
+            "name": "Tap 4.4 Sexy",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-04-05T04:45:43",
+            "lasttriggered": "2015-05-14T04:30:32",
+            "timestriggered": 20,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/4/state/buttonevent",
+                    "operator": "eq",
+                    "value": "18"
+                },
+                {
+                    "address": "/sensors/4/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "8a292055c-on-0"
+                    }
+                }
+            ]
+        },
+        "6": {
+            "name": "Tap 4.2 Living Room: Bright",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-04-08T00:10:56",
+            "lasttriggered": "2015-05-16T00:58:55",
+            "timestriggered": 61,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/4/state/buttonevent",
+                    "operator": "eq",
+                    "value": "16"
+                },
+                {
+                    "address": "/sensors/4/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "9b61d6be5-on-0"
+                    }
+                }
+            ]
+        },
+        "7": {
+            "name": "Tap 4.1 2 lights",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-03-29T23:40:27",
+            "lasttriggered": "2015-05-16T12:47:36",
+            "timestriggered": 68,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/4/state/buttonevent",
+                    "operator": "eq",
+                    "value": "34"
+                },
+                {
+                    "address": "/sensors/4/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "b2595e9d5-off-0"
+                    }
+                }
+            ]
+        },
+        "8": {
+            "name": "Tap 4.3 Evening",
+            "owner": "ffffffff895551f9ffffffff848fe0dd",
+            "created": "2015-04-08T00:13:06",
+            "lasttriggered": "2015-05-16T01:57:11",
+            "timestriggered": 48,
+            "status": "enabled",
+            "conditions": [
+                {
+                    "address": "/sensors/4/state/buttonevent",
+                    "operator": "eq",
+                    "value": "17"
+                },
+                {
+                    "address": "/sensors/4/state/lastupdated",
+                    "operator": "dx"
+                }
+            ],
+            "actions": [
+                {
+                    "address": "/groups/0/action",
+                    "method": "PUT",
+                    "body": {
+                        "scene": "6a317037f-on-0"
+                    }
+                }
+            ]
+        }
+    },
+    "sensors": {
+        "1": {
+            "state": {
+                "daylight": null,
+                "lastupdated": "none"
+            },
+            "config": {
+                "on": true,
+                "long": "none",
+                "lat": "none",
+                "sunriseoffset": 30,
+                "sunsetoffset": -30
+            },
+            "name": "Daylight",
+            "type": "Daylight",
+            "modelid": "PHDL00",
+            "manufacturername": "Philips",
+            "swversion": "1.0"
+        },
+        "2": {
+            "state": {
+                "buttonevent": 34,
+                "lastupdated": "2015-05-16T06:05:18"
+            },
+            "config": {
+                "on": true
+            },
+            "name": "Bedroom",
+            "type": "ZGPSwitch",
+            "modelid": "ZGPSWITCH",
+            "manufacturername": "Philips",
+            "uniqueid": "00:00:00:00:00:42:bd:bb-f2"
+        },
+        "3": {
+            "state": {
+                "status": 0,
+                "lastupdated": "none"
+            },
+            "config": {
+                "on": true,
+                "reachable": true
+            },
+            "name": "TapApp-lights-state-7",
+            "type": "CLIPGenericStatus",
+            "modelid": "0.0.0.1",
+            "manufacturername": "TapApp",
+            "swversion": "1.0a",
+            "uniqueid": "<uniqueId>"
+        },
+        "4": {
+            "state": {
+                "buttonevent": 34,
+                "lastupdated": "2015-05-16T12:47:36"
+            },
+            "config": {
+                "on": true
+            },
+            "name": "Living Room",
+            "type": "ZGPSwitch",
+            "modelid": "ZGPSWITCH",
+            "manufacturername": "Philips",
+            "uniqueid": "00:00:00:00:00:43:2f:9b-f2"
+        }
+    }
+}
