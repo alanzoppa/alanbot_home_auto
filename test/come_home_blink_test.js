@@ -17,24 +17,39 @@ describe("Lights", function(){
             done();
         })
     })
+
+    afterEach(function() {
+        nock.cleanAll();
+    })
+
     it("Should light", function(done) {
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 1', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 2', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 3', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 1', false);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 2', false);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 3', false);
+        var expectations = [];
+        [
+            [ 'Kitchen 1', true ],
+            [ 'Kitchen 2', true ],
+            [ 'Kitchen 3', true ],
+            [ 'Kitchen 1', false ],
+            [ 'Kitchen 2', false ],
+            [ 'Kitchen 3', false ],
+            [ 'Kitchen 1', true ],
+            [ 'Kitchen 2', true ],
+            [ 'Kitchen 3', true ],
+            [ 'Kitchen 1', false ],
+            [ 'Kitchen 2', false ],
+            [ 'Kitchen 3', false ],
+        ].forEach((setting)=> {
+            var [light, on] = setting;
+            expectations.push(
+                sharedNocks.nockHueState(this.hueSettings, light, on)
+                )
+        })
 
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 1', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 2', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 3', true);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 1', false);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 2', false);
-       sharedNocks.nockHueState(this.hueSettings, 'Kitchen 3', false);
-
-       this.blinkBot.start();
-       setTimeout( function() {
-               done();
-       }, 150)
+        this.blinkBot.start();
+        setTimeout( function() {
+            expectations.forEach(function(expectation) {
+                expectation.done(); //error if expectation.isDone() == false;
+            })
+            done();
+        }, 150)
     })
 })
