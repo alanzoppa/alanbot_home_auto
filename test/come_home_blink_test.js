@@ -30,18 +30,28 @@ describe("Lights", function(){
         this.hueSettings = new HueSettings(config);
         nockHueConfig(this.hueSettings);
         this.hueSettings.setup.then(function() {
-            that.blinkBot = blinkBotMaker(that.hueSettings);
+            that.blinkBot = blinkBotMaker(that.hueSettings, 10);
             done();
         })
     })
-    it("Should light", function() {
+    it("Should light", function(done) {
        nockHueState(this.hueSettings, 'Kitchen 1', true);
        nockHueState(this.hueSettings, 'Kitchen 2', true);
        nockHueState(this.hueSettings, 'Kitchen 3', true);
        nockHueState(this.hueSettings, 'Kitchen 1', false);
        nockHueState(this.hueSettings, 'Kitchen 2', false);
        nockHueState(this.hueSettings, 'Kitchen 3', false);
-       this.blinkBot.start();
 
+       nockHueState(this.hueSettings, 'Kitchen 1', true);
+       nockHueState(this.hueSettings, 'Kitchen 2', true);
+       nockHueState(this.hueSettings, 'Kitchen 3', true);
+       nockHueState(this.hueSettings, 'Kitchen 1', false);
+       nockHueState(this.hueSettings, 'Kitchen 2', false);
+       nockHueState(this.hueSettings, 'Kitchen 3', false);
+
+       this.blinkBot.start();
+       setTimeout( function() {
+               done();
+       }, 150)
     })
 })
