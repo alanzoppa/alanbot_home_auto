@@ -16,9 +16,26 @@ function nockHueConfig(settings) {
 describe("Hue Config Creator", function(){
     beforeEach(function(){
         this.hueSettings = new HueSettings(config);
+        nockHueConfig(this.hueSettings);
     })
     it("Should get the url", function() {
-        nockHueConfig(this.hueSettings);
         this.hueSettings.hue_config_url.should.eql('http://192.168.1.1/api/0000000000000000000000000000000')
     })
+    it("Should get the lights", function(done) { 
+        var expected = { 
+          'Living Room 1': { driver: 'hue-light', lightId: 1 },
+          'Living Room 2': { driver: 'hue-light', lightId: 2 },
+          'Bedroom': { driver: 'hue-light', lightId: 3 },
+          'Storage Room': { driver: 'hue-light', lightId: 4 },
+          'Kitchen 1': { driver: 'hue-light', lightId: 5 },
+          'Kitchen 2': { driver: 'hue-light', lightId: 6 },
+          'Kitchen 3': { driver: 'hue-light', lightId: 7 }
+        }
+        this.hueSettings.setup.then(function(hueSettings){
+            hueSettings.lights.should.eql(expected);
+            done();
+        })
+    })
 })
+
+
