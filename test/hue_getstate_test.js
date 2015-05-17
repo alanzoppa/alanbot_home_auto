@@ -32,9 +32,13 @@ describe("Hue Config Creator", function(){
           'Kitchen 3': { driver: 'hue-light', lightId: 7 }
         }
         this.hueSettings.setup.then(function(hueSettings){
-            hueSettings.lights.should.eql(expected);
+            hueSettings.cylonLights.should.eql(expected);
             done();
         })
+    })
+    it('should pass on the cylon config object', function() {
+        let cfg = this.hueSettings.cylonConfig();
+        cfg.adaptor.should.eql('hue');
     })
 })
 

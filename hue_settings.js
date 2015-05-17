@@ -5,6 +5,7 @@ var Q = require('q');
 class HueSettings {
     constructor(config) {
         this.hue_config_url = `http://${config.hue.cylon.host}/api/${config.hue.cylon.username}`;
+        this.baseConfig = config;
         this.config_deferral = Q.defer();
         this.setup = this.config_deferral.promise;
         request(this.hue_config_url, (err, res, body)=> {
@@ -15,12 +16,15 @@ class HueSettings {
     }
     _setupLights(config) {
         let keys = Object.keys(config.lights);
-        this.lights = {};
+        this.cylonLights = {};
         for (let key of keys) {
             let light = config.lights[key];
-            this.lights[`${light.name}`] = {driver: 'hue-light', lightId: parseInt(key)}
+            this.cylonLights[`${light.name}`] = {driver: 'hue-light', lightId: parseInt(key)}
         }
         this.config_deferral.resolve(this);
+    }
+    cylonConfig() {
+        return this.baseConfig.hue.cylon;
     }
 }
 
