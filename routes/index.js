@@ -3,7 +3,7 @@ var router = express.Router();
 var events = require('events')
 var config = require('../config.json');
 var CameraAimer = require('../events/camera_aimer');
-var SmartthingsPayloadLogger = require('../smartthings_payload_logger');
+var SmartthingsPayloadLogger = require('../lib/smartthings_payload_logger');
 
 var aimer = new CameraAimer(config.camera);
 

@@ -1,6 +1,6 @@
 var routes = require('../routes/index');
 var fake_smartthings_payloads = require('./fake_smartthings_payloads.json');
-var SmartthingsPayloadLogger = require('../smartthings_payload_logger');
+var SmartthingsPayloadLogger = require('../lib/smartthings_payload_logger');
 var CameraAimer = require('../events/camera_aimer');
 var nock = require('nock');
 var config = require('../config.json');

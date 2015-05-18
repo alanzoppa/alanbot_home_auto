@@ -1,5 +1,5 @@
 var fake_smartthings_payloads = require('./fake_smartthings_payloads.json');
-var SmartthingsPayloadLogger = require('../smartthings_payload_logger');
+var SmartthingsPayloadLogger = require('../lib/smartthings_payload_logger');
 var test_data = require('../test_data.json')
 var tk = require('timekeeper');
 var fs = require('fs');
