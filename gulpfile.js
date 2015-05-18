@@ -5,7 +5,7 @@ var argv = require('yargs').argv;
 var config = require('./config');
 var HueSettings = require('./hue_settings');
 
-var HomeStateMachine = require('./state_manager');
+var HomeStateMachine = require('./lib/state_manager');
 var stateMachine = new HomeStateMachine();
 
 gulp.task('default', function(done) {

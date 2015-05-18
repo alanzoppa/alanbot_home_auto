@@ -8,7 +8,7 @@ var SmartthingsPayloadLogger = require('../lib/smartthings_payload_logger');
 var aimer = new CameraAimer(config.camera);
 
 var stLogger = new SmartthingsPayloadLogger();
-var HomeStateMachine = require('../state_manager');
+var HomeStateMachine = require('../lib/state_manager');
 var stateMachine = new HomeStateMachine();
 
 /* GET home page. */

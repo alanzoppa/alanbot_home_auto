@@ -9,7 +9,7 @@ var emitter = new Object();
 var R = require('ramda')
 var config = R.clone(require('../config.json'));
 
-var HomeStateMachine = require('../state_manager');
+var HomeStateMachine = require('../lib/state_manager');
 
 var cameraAimer = new CameraAimer(config.camera);
 
