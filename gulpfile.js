@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var CameraAimer = require('./events/camera_aimer')
 var argv = require('yargs').argv;
 var config = require('./config');
-var HueSettings = require('./hue_settings');
+var HueSettings = require('./lib/hue_settings');
 
 var HomeStateMachine = require('./lib/state_manager');
 var stateMachine = new HomeStateMachine();

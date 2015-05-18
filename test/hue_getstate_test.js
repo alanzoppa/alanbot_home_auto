@@ -1,4 +1,4 @@
-var HueSettings = require('../hue_settings');
+var HueSettings = require('../lib/hue_settings');
 var config = require('../example_config');
 var url = require('url');
 var fake_hue_response = require('./fake_hue_config');
