@@ -1,6 +1,6 @@
 require('babel/register')
 var gulp = require('gulp');
-var CameraAimer = require('./events/camera_aimer')
+var CameraAimer = require('./lib/camera_aimer')
 var argv = require('yargs').argv;
 var config = require('./config');
 var HueSettings = require('./lib/hue_settings');
@@ -24,7 +24,7 @@ gulp.task('setState', function() {
 
 
 gulp.task('cameHome', function() {
-    var cameHomeRobotMaker = require('./events/came_home_blink');
+    var cameHomeRobotMaker = require('./lib/came_home_blink');
     var hueSettings = new HueSettings(config);
     hueSettings.setup.then(function(){
         var robot = cameHomeRobotMaker(hueSettings);

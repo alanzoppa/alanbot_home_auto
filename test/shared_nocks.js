@@ -2,7 +2,7 @@ var nock = require('nock');
 var url = require('url');
 var fake_hue_response = require('./fake_hue_config');
 var config = require('../example_config.json'); 
-var CameraAimer = require('../events/camera_aimer');
+var CameraAimer = require('../lib/camera_aimer');
 var cameraAimer = new CameraAimer(config.camera);
 
 module.exports = {

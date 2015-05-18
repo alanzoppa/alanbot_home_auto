@@ -3,7 +3,7 @@ var fake_smartthings_payloads = require('./fake_smartthings_payloads.json');
 var url = require('url');
 var nock = require('nock');
 require('chai').should();
-var CameraAimer = require('../events/camera_aimer');
+var CameraAimer = require('../lib/camera_aimer');
 var events = require('events');
 var emitter = new Object();
 var R = require('ramda')

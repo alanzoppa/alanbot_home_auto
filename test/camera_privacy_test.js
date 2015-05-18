@@ -1,8 +1,8 @@
 var should = require('chai').should();
 var config = require('../config.json').camera;
 var config = require('../example_config.json').camera;
-var test_data = require('../test_data.json').camera;
-var CameraAimer = require('../events/camera_aimer');
+var test_data = require('../test/test_data.json').camera;
+var CameraAimer = require('../lib/camera_aimer');
 var nock = require('nock');
 var url = require('url');
 

@@ -3,7 +3,7 @@ var config = require('../example_config');
 var url = require('url');
 var nock = require('nock');
 var fake_hue_response = require('./fake_hue_config');
-var blinkBotMaker = require('../events/came_home_blink');
+var blinkBotMaker = require('../lib/came_home_blink');
 var sharedNocks = require('./shared_nocks')
 
 
