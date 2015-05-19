@@ -23,27 +23,7 @@ describe("Lights", function(){
     })
 
     it("Should light", function(done) {
-        var expectations = [];
-        [
-            [ 'Kitchen 1', true ],
-            [ 'Kitchen 2', true ],
-            [ 'Kitchen 3', true ],
-            [ 'Kitchen 1', false ],
-            [ 'Kitchen 2', false ],
-            [ 'Kitchen 3', false ],
-            [ 'Kitchen 1', true ],
-            [ 'Kitchen 2', true ],
-            [ 'Kitchen 3', true ],
-            [ 'Kitchen 1', false ],
-            [ 'Kitchen 2', false ],
-            [ 'Kitchen 3', false ],
-        ].forEach((setting)=> {
-            var [light, on] = setting;
-            expectations.push(
-                sharedNocks.nockHueState(this.hueSettings, light, on)
-                )
-        })
-
+        var expectations = sharedNocks.nockCameHomeBlink(this.hueSettings);
         this.blinkBot.start();
         setTimeout( function() {
             expectations.forEach(function(expectation) {

@@ -47,6 +47,29 @@ module.exports = {
         }
         return output;
 
+    },
+    nockCameHomeBlink: function(hueSettings) {
+        var expectations = [];
+        [
+            [ 'Kitchen 1', true ],
+            [ 'Kitchen 2', true ],
+            [ 'Kitchen 3', true ],
+            [ 'Kitchen 1', false ],
+            [ 'Kitchen 2', false ],
+            [ 'Kitchen 3', false ],
+            [ 'Kitchen 1', true ],
+            [ 'Kitchen 2', true ],
+            [ 'Kitchen 3', true ],
+            [ 'Kitchen 1', false ],
+            [ 'Kitchen 2', false ],
+            [ 'Kitchen 3', false ],
+        ].forEach((setting)=> {
+            var [light, on] = setting;
+            expectations.push(
+                this.nockHueState(hueSettings, light, on)
+                )
+        })
+        return expectations;
     }
 
 

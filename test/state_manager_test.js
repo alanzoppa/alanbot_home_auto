@@ -7,7 +7,11 @@ var CameraAimer = require('../lib/camera_aimer');
 var events = require('events');
 var emitter = new Object();
 var R = require('ramda')
-var config = R.clone(require('../config.json'));
+var config = require('../config.json');
+var example_config = require('../example_config.json');
+var shared_nocks = require('./shared_nocks');
+var HueSettings = require('../lib/hue_settings');
+var shared_nocks = require('./shared_nocks')
 
 var HomeStateMachine = require('../lib/state_manager');
 
@@ -65,9 +69,28 @@ describe("State Manager", function() {
         stateManager.state.should.eql('home');
     }) 
     it("should respond to smartthings events", function() {
+        nockState('lookAway');
         var stateManager = new HomeStateMachine();
         stateManager._allowedStates().should.eql(
                 [ 'home', 'away', 'evening', 'night' ]
                 )
     })
+    it("should call methods otherwise", function(done) {
+        var hueSettings = new HueSettings(config);
+        var config1 = shared_nocks.nockHueConfig(hueSettings);
+        hueSettings.setup.then(function() {
+            var expectations = shared_nocks.nockCameHomeBlink(hueSettings);
+            var config2 = shared_nocks.nockHueConfig(hueSettings);
+            var stateManager = new HomeStateMachine();
+            stateManager.stEvent(fake_smartthings_payloads[9])
+            setTimeout(function() {
+                config1.done();
+                config2.done();
+                expectations.forEach(function(expectation){
+                    expectation.done();
+                })
+                done();
+            }, 250);
+        })
+    });
 })
