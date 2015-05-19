@@ -63,5 +63,11 @@ describe("State Manager", function() {
         nockState('lookAway');
         stateManager.stEvent(fake_smartthings_payloads[0])
         stateManager.state.should.eql('home');
+    }) 
+    it("should respond to smartthings events", function() {
+        var stateManager = new HomeStateMachine();
+        stateManager._allowedStates().should.eql(
+                [ 'home', 'away', 'evening', 'night' ]
+                )
     })
 })
